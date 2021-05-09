@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+eleventyNavigation:
+  key: Главная
+  order: 1
+---
+<h1>DEV-заметки Сергея Мухина</h1>
+<section class="tags">
+  <h2>Теги</h2>
+  {% include "blocks/tag-list.njk" %}
+</section>
+
+
+{# {% set maxNotes = collections.notes.length | min(3) %} #}
+<h2>Последние заметки</h2>
+
+{% set noteslist = collections.notes | head(-20) %}
+{% set noteslistCounter = collections.notes | length %}
+{% include "noteslist.njk" %}
+
+<p>Больше заметок смотри в <a href="{{ '/notes/' | url }}">архиве</a>.</p>

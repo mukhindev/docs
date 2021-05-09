@@ -1,0 +1,19 @@
+<header class="header no-print">
+  <div class="container header__container">
+    {% if page.url == '/' %}
+      <div class="header__logo header__logo_is-home">
+        {% include "blocks/logo.njk" %}
+      </div>
+    {% endif %}
+    {% if page.url !== '/' %}
+      <a
+        class="header__logo"
+        href="{{ '/' | url }}"
+        title="Возврат на главную"
+      >
+        {% include "blocks/logo.njk" %}
+      </a>
+    {% endif %}
+    {% include "blocks/nav.njk" %}
+  </div>
+</header>

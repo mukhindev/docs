@@ -1,14 +1,14 @@
 {
-  "name": "docs",
+  "name": "test-11ty",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy --input=./src",
-    "watch": "eleventy --input=./src --watch",
-    "serve": "eleventy --input=./src --serve",
+    "build": "eleventy",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
     "lint": "eslint ./src",
-    "debug": "DEBUG=* eleventy --input=./src"
+    "debug": "DEBUG=* eleventy"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
+    <link rel="stylesheet" href="{{ '/styles/normalize.css' | url }}">
+    <link rel="stylesheet" href="{{ '/styles/vscode.css' | url }}">
+    <link rel="stylesheet" href="{{ '/styles/index.css' | url }}">
+    <link rel="stylesheet" href="{{ '/fonts/inter.css' | url }}">
+    <link rel="icon" type="image/png" href="{{ '/favicon.png' | url }}">
+  </head>
+  <body class="base">
+    {% include "blocks/header.njk" %}
+    {% include "blocks/main.njk" %}
+    {% include "blocks/footer.njk" %}
+  </body>
+</html>
